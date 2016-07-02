@@ -1,0 +1,58 @@
+"""
+Implement a function to check if a binary tree is balanced. For the purposes
+of this question, a balanced tree is defined to be a tree such that the heights
+of the two subtrees of any node never differ by more than one.
+"""
+
+from binary_tree import BinaryTree
+import random
+
+root = BinaryTree(random.randint(0,20))
+stack = [root]
+for i in range(0, 3):
+    current_node = stack.pop()
+    current_node.left = BinaryTree(random.randint(0,20))
+    current_node.right = BinaryTree(random.randint(0,20))
+    stack.insert(0, current_node.left)
+    stack.insert(0, current_node.right)
+
+print root
+"""
+# creating an inbalanced tree
+current_node = stack.pop()
+current_node.left = Tree(random.randint(0,20))
+current_node.left.left = Tree(random.randint(0,20))
+"""
+
+def check_height(root):
+    if not root:
+        return 0
+    print "node: ", root.value
+    left_height = check_height(root.left)
+    print "left_height: ", left_height
+    if left_height == -1:
+        return -1 # not balanced
+
+    print 
+
+    right_height = check_height(root.right)
+    print "right_height: ", right_height
+    if right_height == -1:
+        return -1 # not balanced
+    
+    height_difference = abs(left_height - right_height)
+    print "DIFF: ", height_difference
+    print
+    if height_difference > 1:
+        return -1
+    else:
+        return max(left_height, right_height) + 1
+
+
+def is_balanced(root):
+    if check_height(root) == -1:
+        return False
+    else:
+        return True
+
+print is_balanced(root)
