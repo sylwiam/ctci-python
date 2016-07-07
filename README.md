@@ -1,4 +1,4 @@
-# Solutions to "Cracking the Coding Interview" book by Gayle Laakmann McDowell.
+## Solutions to "Cracking the Coding Interview" book by Gayle Laakmann McDowell.
 
 This project is a collection of answers to problems from the "Cracking the Coding Interview" book.
 I wanted to dig into python algorithms and data strcutures so I started solving questions from that book.
