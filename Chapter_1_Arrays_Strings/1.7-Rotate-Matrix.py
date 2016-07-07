@@ -20,30 +20,25 @@ def rotateMatrix(matrix, n):
 		# y - loop through each row from bottom to top, right to left
 		i = 0  # index for item in each sub-list of new matrix
 		for y in range(n-1, -1, -1):   # start: 2, end: 0 (-1 not inclusive), increment by -1 (decrement)
-			# new_matrix[x][n-y-1] = matrix[y][x]
 			new_matrix[x][i] = matrix[y][x]
-			print "OLD: " + str(matrix)
-			print "NEW: " + str(new_matrix)
-			print "----"
 			i += 1
 
 	return new_matrix
 
-# [1,2,3]
-# [4,5,6]
-# [7,8,9]
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-new_matrix = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
-# new_ma = [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
-# [11,12,13,14]
-# [15,16,17,18]
-# [19,20,21,22]
-# [23,24,25,26]
-# matrix = [[11,12,13,14],[15,16,17,18],[19,20,21,22],[23,24,25,26]]
-print "Before OLD: " + str(matrix)
-print "Before NEW: " + str(new_matrix)
 
-n = len(matrix)  # n is number of 'rows' in a matrix
-print "Length: ", n
-print "Original matrix: " + str(matrix)
-print "Rotated matrix: " + str(rotateMatrix(matrix, n))
+if __name__ == '__main__':
+	matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+	# [1,2,3]
+	# [4,5,6]
+	# [7,8,9]
+
+	new_matrix = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+	# new_ma = [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
+	# [7, 4, 1]
+	# [8, 5, 2]
+	# [9, 6, 3]
+
+	n = len(matrix)  # n is number of 'rows' in a matrix
+	print "Length: ", n
+	print "Original matrix: " + str(matrix)
+	print "Rotated matrix: " + str(rotateMatrix(matrix, n))

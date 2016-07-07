@@ -27,22 +27,18 @@ current_node.left.left = Tree(random.randint(0,20))
 def check_height(root):
     if not root:
         return 0
-    print "node: ", root.value
+    
     left_height = check_height(root.left)
-    print "left_height: ", left_height
+    
     if left_height == -1:
         return -1 # not balanced
 
-    print 
-
     right_height = check_height(root.right)
-    print "right_height: ", right_height
     if right_height == -1:
         return -1 # not balanced
     
     height_difference = abs(left_height - right_height)
-    print "DIFF: ", height_difference
-    print
+    
     if height_difference > 1:
         return -1
     else:
@@ -55,4 +51,6 @@ def is_balanced(root):
     else:
         return True
 
-print is_balanced(root)
+
+if __name__ == '__main__':
+    print is_balanced(root)

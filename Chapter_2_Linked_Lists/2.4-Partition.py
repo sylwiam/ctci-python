@@ -46,12 +46,14 @@ def partition_list(head, x):
 	print "nl head next: ", nl.head.next.data
 	print nl.print_list2(nl.head)
 
-ol = LinkedList()
-arr = [4, 25, 12, 3, 2, 10, 5, 1]
-ol.insert_multi(arr)
 
-print "ol size: ", ol.get_size()
-print ol.print_list()
-print "head: ", ol.get_head()
-print "tail: ", ol.get_tail()
-print partition_list(ol.head, 9)
+if __name__ == '__main__' :
+	ol = LinkedList()
+	arr = [4, 25, 12, 3, 2, 10, 5, 1]
+	ol.insert_multi(arr)
+
+	print "ol size: ", ol.get_size()
+	print ol.print_list()
+	print "head: ", ol.get_head()
+	print "tail: ", ol.get_tail()
+	print partition_list(ol.head, 9)

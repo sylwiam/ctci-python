@@ -28,17 +28,15 @@ def sum_lists(node1, node2, carry):
 	print "resultNode.data", resultNode.data
 
 
+if __name__ == '__main__':
+	l1 = LinkedList()
+	l1.insert(3)
+	l1.insert(7)
+	l1.insert(9)
 
-l1 = LinkedList()
-l1.insert(3)
-l1.insert(7)
-l1.insert(9)
-# print "size l1: ", l1.get_size()
+	l2 = LinkedList()
+	l2.insert(2)
+	l2.insert(5)
+	l2.insert(4)
 
-l2 = LinkedList()
-l2.insert(2)
-l2.insert(5)
-l2.insert(4)
-# print "size l2: ", l2.get_size()
-
-sum_lists(l1.head, l2.head, 0)
+	sum_lists(l1.head, l2.head, 0)

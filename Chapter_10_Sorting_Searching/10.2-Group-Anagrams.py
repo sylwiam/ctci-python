@@ -7,15 +7,15 @@ def organize_anagrams(wordList):
 	for item in wordList:
 		itemKey = ''.join(sorted(item))
 		dictionary.setdefault(itemKey,[]).append(item)
-		print dictionary
 
 	finalList = []
 	for key, value in dictionary.items():
 		finalList.extend(value)
 
-
-	print "Final: ", finalList
+	return finalList
 		
 
-l = ['abba', 'bbaa', 'baab', 'c`at', 'cta', 'act', 'dog', 'god']
-organize_anagrams(l)
+if __name__ == '__main__':
+	l = ['abba', 'cat', 'cta', 'baab', 'act', 'dog', 'god', 'bbaa']
+
+	print organize_anagrams(l)

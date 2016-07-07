@@ -78,30 +78,31 @@ def get_intersection_node(headA, headB):
 	
 	return intersection
 
-lA = LinkedList()
-lA.insert('c3')
-lA.insert('c2')
-lA.insert('c1')
-lA.insert('a2')
-lA.insert('a1')
+if __name__ == '__main__':	
+	lA = LinkedList()
+	lA.insert('c3')
+	lA.insert('c2')
+	lA.insert('c1')
+	lA.insert('a2')
+	lA.insert('a1')
 
-lB = LinkedList()
-lB.insert('c3')
-lB.insert('c2')
-lB.insert('c1')
-lB.insert('b4')
-lB.insert('b3')
-lB.insert('b2')
-lB.insert('b1')
+	lB = LinkedList()
+	lB.insert('c3')
+	lB.insert('c2')
+	lB.insert('c1')
+	lB.insert('b4')
+	lB.insert('b3')
+	lB.insert('b2')
+	lB.insert('b1')
 
-print "list A size: ", lA.get_size()
-print "list A head: ", lA.head.data
-lA.print_list2(lA.head)
+	print "list A size: ", lA.get_size()
+	print "list A head: ", lA.head.data
+	lA.print_list2(lA.head)
 
-print "list A size: ", lB.get_size()
-print "list A head: ", lB.head.data
-lA.print_list2(lB.head)
+	print "list A size: ", lB.get_size()
+	print "list A head: ", lB.head.data
+	lA.print_list2(lB.head)
 
-print get_intersection_node(lA.head, lB.head)
+	print get_intersection_node(lA.head, lB.head)
 
-# print 'middle', lA.find_middle(lA.head)
+	# print 'middle', lA.find_middle(lA.head)

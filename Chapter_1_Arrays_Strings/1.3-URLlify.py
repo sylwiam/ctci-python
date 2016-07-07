@@ -5,13 +5,12 @@ and that yu are given the "true" lengths of the string.
 import re
 
 def urlify(str):
-	print "'"+str+"'"
+	print "'" + str + "'"
 	str = str.strip()
 	pattern = r'\s+'
 	newStr = re.sub(pattern, '%20', str)
-	print "'"+newStr+"'"
+	print "'" + newStr + "'"
 
 
 if __name__ == '__main__':
 	urlify('This is a     test.   ')
-

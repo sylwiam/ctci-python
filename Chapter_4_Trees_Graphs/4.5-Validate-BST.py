@@ -24,11 +24,7 @@ def is_BST(node):
         is_BST(node.left)
         print node.value
         is_BST(node.right)
-            
-           
+                       
 
-
-
-
-
-print is_BST(root)
+if __name__ == '__main__':
+    print is_BST(root)

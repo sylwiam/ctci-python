@@ -17,11 +17,11 @@ def isUniqueNoDS(str):
     #no data structures
     #O(n^2)
     for char in str:
-        foundcount=0
+        foundcount = 0
         for char2 in str:
-            if char==char2:
-                foundcount=foundcount+1
-            if foundcount>1:
+            if char == char2:
+                foundcount = foundcount + 1
+            if foundcount > 1:
             	print 'NOT Unique'
                 return False
 	print 'Unique'        
@@ -29,6 +29,6 @@ def isUniqueNoDS(str):
 
 
 if __name__ == '__main__':
-	isUnique("bacc")
+	isUnique("bacd")
 
 

@@ -35,11 +35,8 @@ def findPreSuc(node, value):
     if node is None:
         return
 
-    print "node.value: ", node.value
-
     # If value is present at node
     if node.value == value:
-        print "IF node.value == value "
         # the maximum value in left subtree is predecessor
         # if node.left is not None:
         #     print "IF node.left is not None"
@@ -50,7 +47,6 @@ def findPreSuc(node, value):
 
         # the minimum value in right subtree is successor
         if node.right is not None:
-            print "IF node.right is not None "
             tmp = node.right
             while(tmp.left):
                 tmp = tmp.left
@@ -59,7 +55,6 @@ def findPreSuc(node, value):
         return
 
     if node.value > value:  # If value is smaller than node's value, go to left subtree
-        print "IF node.value > value "
         findPreSuc.suc = node
         findPreSuc(node.left, value)
 
@@ -103,19 +98,11 @@ insert(root, 60)
 insert(root, 80)
 
 print root
-
-print "\nvalue:::::: ", value, '\n'
-# Static variables of the function findPreSuc
-# findPreSuc.pre = None
 findPreSuc.suc = None
 
 findPreSuc(root, value)
 
 print "----"
-# if findPreSuc.pre is not None:
-#     print "Predecessor is", findPreSuc.pre.value
-# else:
-#     print "No Predecessor"
 
 if findPreSuc.suc is not None:
     print "Successor is", findPreSuc.suc.value

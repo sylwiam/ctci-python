@@ -21,11 +21,6 @@ class LinkedList:
     def __str__(self):
         return "( " + str(self.content) + str(self.next) + " )"
     
-def generate_tree_depth_lists():
-    
-
-def generate_linked_lists():
-
 #building testcase 1
 def make_random_balanced_tree(depth):
     if depth>0:
@@ -36,9 +31,6 @@ def make_random_balanced_tree(depth):
     else:
         return None
 
-balanced_tree = make_random_balanced_tree(5)
 
-
-#testing
-
-print balanced_tree
+if __name__ == '__main__':
+    print make_random_balanced_tree(5)

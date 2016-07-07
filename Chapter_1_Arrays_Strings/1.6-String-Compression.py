@@ -10,7 +10,6 @@ def compressString(str1):
 	prev = str1[0]
 
 	for char in str1:
-		print "char: ", char
 		if char == prev:
 			count += 1
 		else:
@@ -28,4 +27,5 @@ def compressString(str1):
 		return res
 
 
-print compressString('aabcccccaaa')
+if __name__ == '__main__':
+	print compressString('aabcccccaaa')

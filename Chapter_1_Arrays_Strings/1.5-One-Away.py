@@ -29,8 +29,8 @@ def isOneEditAway(str1, str2):
 	else:
 		return False
 
-def isReplace(str1, str2):
+# def isReplace(str1, str2):
 
-def isDelete(str1, str2):
+# def isDelete(str1, str2):
 
-def isAdd(str1, str2):	
+# def isAdd(str1, str2):	

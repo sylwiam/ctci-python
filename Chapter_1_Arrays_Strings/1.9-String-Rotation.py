@@ -10,7 +10,6 @@ the original word is always inside the concatenated one:
 def checkRotation(s1, s2):	
 	if len(s1) > 0 and (len(s1) == len(s2)):
 		s2new = s2 + s2
-		print "s2new: ", s2new
 		if s1 in s2new:
 			return True
 
@@ -21,8 +20,4 @@ if __name__ == '__main__' :
 	# s2 = 'erbottlewat'
 	s1 = 'superstorm'
 	s2 = 'stormsuper'
-	print "s1: ", s1
-	print "s2: ", s2
 	print checkRotation(s1, s2)
-
-

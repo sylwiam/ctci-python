@@ -15,7 +15,6 @@ column of every zero element, you will eventually have an array with all
 elements being zero. This needs to be avoided.
 """
 
-# by utilizing a class
 class ZeroMatrix:
 
 	def __init__(self, matrix):
@@ -30,20 +29,15 @@ class ZeroMatrix:
 
 	def set_zeros(self):	    
 	    for row in range(0, self._num_of_rows):
-	        # print "self._num_of_cols: ", self._num_of_cols
 	        for col in range(0, self._num_of_cols):
-	            # print "item: ", self._matrix[row][col]
 	            if self._matrix[row][col] == 0:
 	            	if row not in self._zero_in_rows:
 	                	self._zero_in_rows.append(row)
 	                if col not in self._zero_in_cols:
 	                	self._zero_in_cols.append(col)
-	    print "self._zero_in_rows: ", self._zero_in_rows
-	    print "self._zero_in_cols: ", self._zero_in_cols
-	    # nullify_columns(self._matrix)
-	    # nullify_rows(self._matrix)
+	    
 	    self.nullify_rows_and_cols()
-	    print "after:  ", self._matrix, '\n'
+	    
 	    return self._matrix
 
 	# option 1: nulify columns and rows separately
@@ -57,7 +51,7 @@ class ZeroMatrix:
 	        for index in range(0, len(self._matrix[0])):
 	            self._matrix[row][index] = 0
 
-	# option 1: nulify columns and rows together, traversing only once through the self._matrix
+	# option 2: nulify columns and rows together, traversing only once through the self._matrix
 	def nullify_rows_and_cols(self):
 		for row in range(0, self._num_of_rows):
 		    # print "self._num_of_cols: ", self._num_of_cols
@@ -70,11 +64,20 @@ class ZeroMatrix:
 
 
 if __name__ == '__main__' :
-	# self._matrix = [[1,0,3,5], [2,5,6,2], [9,3,0,8], [3,4,5,7], [0,8,3,1]]
 	matrix = [[0,1,0,2], [2,5,6,1], [9,3,1,8], [3,4,5,7], [9,8,3,1]]
+	# [0, 1, 0, 2]
+	# [2, 5, 6, 1]
+	# [9, 3, 1, 8]
+	# [3, 4, 5, 7]
+	# [9, 8, 3, 1]
 	print "before: ", matrix
-	# set_zeros(self._matrix)
 
 	mx = ZeroMatrix(matrix)
-	mx.set_zeros()
+	
+	print "after:  ", mx.set_zeros(), '\n'
+	# [0, 0, 0, 0]
+	# [0, 5, 0, 1] 
+	# [0, 3, 0, 8] 
+	# [0, 4, 0, 7] 
+	# [0, 8, 0, 1]
 
